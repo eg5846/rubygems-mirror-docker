@@ -1,0 +1,4 @@
+---
+- from: http://rubygems.org
+  to: /mirror/rubygems.org
+  parallelism: 10
