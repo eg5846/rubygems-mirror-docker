@@ -1,4 +1,5 @@
 FROM ubuntu:trusty
+MAINTAINER Andreas Egner <andreas.egner@web.de>
 
 ENV HOME /root
 
