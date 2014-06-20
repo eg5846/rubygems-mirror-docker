@@ -15,7 +15,7 @@ sudo docker run --rm -ti -v /export/docker/rubygems-mirror/mirror/rubygems.org:/
 
 ## Run rubygems-mirror docker image
 ```
-sudo docker run --rm -ti -v /export/docker/rubygems-mirror/mirror/rubygems.org:/mirror/rubygems.org eg5846/rubygems-mirror
+sudo docker run --rm -v /export/docker/rubygems-mirror/mirror/rubygems.org:/mirror/rubygems.org eg5846/rubygems-mirror
 ```
 CMD mirrors rubygems.org to given volume and creates file 'content.cto'.  
 Volume should be shared by a webserver container.  
