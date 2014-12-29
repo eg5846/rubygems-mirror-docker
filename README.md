@@ -20,7 +20,7 @@ sudo docker run --rm -ti -v /export/docker/rubygems-mirror/mirror/rubygems.org:/
 ```
 sudo docker run --rm -t -v /export/docker/rubygems-mirror/mirror/rubygems.org:/mirror/rubygems.org eg5846/rubygems-mirror-docker
 
-# Run behind a HTTP proxy
-sudo docker run --rm -t -v /export/rubygems.org:/mirror/rubygems.org -e http_proxy="http://192.168.1.10:800/" eg5846/rubygems-mirror-docker
+# Run behind HTTP proxy
+sudo docker run --rm -t -v /export/rubygems.org:/mirror/rubygems.org -e http_proxy=http://192.168.1.10:800/ -e https_proxy=https://192.168.1.10:800/ eg5846/rubygems-mirror-docker
 ```
 CMD mirrors rubygems.org to given volume.  
