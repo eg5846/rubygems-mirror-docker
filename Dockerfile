@@ -1,4 +1,4 @@
-FROM eg5846/ubuntu-docker:trusty 
+FROM eg5846/ubuntu:trusty 
 MAINTAINER Andreas Egner <andreas.egner@web.de>
 
 #ENV http_proxy http://192.168.1.10:800/
@@ -16,12 +16,12 @@ RUN \
 # Install ruby gems
 RUN \
   /usr/bin/gem install rake -v 10.4.2 --no-rdoc --no-ri && \
-  /usr/bin/gem install hoe -v 3.8.1 --no-rdoc --no-ri && \
+  /usr/bin/gem install hoe -v 3.14.2 --no-rdoc --no-ri && \
   /usr/bin/gem install net-http-persistent -v 2.9.4 --no-rdoc --no-ri
 
 # Install and configure rubygems-mirror
 RUN \
-  git clone https://github.com/huacnlee/rubygems-mirror.git && \
+  git clone https://github.com/rubygems/rubygems-mirror.git && \
   mkdir -p /mirror/rubygems.org
 ADD mirrorrc /root/.gem/.mirrorrc
 

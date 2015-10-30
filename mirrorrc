@@ -1,4 +1,12 @@
 ---
 - from: https://rubygems.org
   to: /mirror/rubygems.org
-  parallelism: 1
+  parallelism: 10
+
+---
+- from: http://rubygems.org
+  to: /data/rubygems
+  parallelism: 10
+  retries: 5
+  delete: false 
+  skiperror: false
